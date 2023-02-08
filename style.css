@@ -1,14 +1,23 @@
 :root{
-    --color-1: #496Bf2;
-    --color-2: #000000;
+    --color-1: #Ec5E65;
+    --color-2: #5E6BCE;
     --color-3: #E7F2F8;
     --p-color: #90929D;
     --section-padding: 1rem 2%;
-    --h1: 3.6rem;
-    --h2: 2.8rem;
+    --h1: 4.2rem;
+    --h2: 2rem;
     --h3: 1.8rem;
-    --p: 1.4rem;
+    --p: 1.6rem;
     --margin-bt: 1.5rem;
+    #FC5E65
+
+    
+/* #E75195
+#B35CBC
+#5E6BCE
+#0071C4
+#006FA2   */
+
 }
 
 *{
@@ -18,7 +27,6 @@
     text-decoration: none;
     list-style: none;
     border: none;
-    position: relative;
     font-family: 'Poppins', sans-serif;
     font-family: 'Gudea', sans-serif;
 }
@@ -45,84 +53,29 @@ a{
 .image{
     width: 100%;
 }
-
-header{
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-header.active{
-    position: sticky;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 300ms ease;
-}
-
-/* first navigation */
-.top{
-    padding: .8rem 2%;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.nav{
-    padding: var(--section-padding);
-}
-
-nav .image img{
-    width: 8rem;
-}
-
-nav ul{
-    display: inline-flex;
-    align-items: center;
-    height: auto !important;    
-}
-
-nav li{
-    padding: 0 1rem;
-}
-
-nav a{
-    color: var(--p-color);
-    font-weight: 500;
-    font-size: 1.2rem;
-}
-
-nav .active{
-    color: var(--color-1);
-}
-
-.nav i{
-    display: none; 
-}
+ 
 
 /* banner section */
-.banner{
-    position: absolute;
+/* .banner{
     width: 100%;
     height: 600px;
-    top: 100%;
+    position: absolute;
+    margin-top: 10%;
     padding: var(--section-padding);
-    background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/watch.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
+.banner .image img{
+    width: 100%;
+    height: 600px;
+    object-fit: fit;
+    aspect-ratio: 2/3;
+}
 .banner .text{
     position: absolute;
-    margin-top: 15rem;
+    margin-top: 13rem;
 }
-
 .banner .text h1{
+    color: #fff;
     font-size: var(--h1);
     margin-bottom: var(--margin-bt);
 }
@@ -144,13 +97,9 @@ nav .active{
     border-radius: 40px;
 }
 
-/* section one */
-.section-one{
-    width: 100%;
-    height: auto;
-    padding: 2% 2rem;
-    display: flex;
-}
+ */
+
+
 
 
 
@@ -208,10 +157,10 @@ nav .active{
         background-color: #e2e3e7;
     }
 
-    .nav i{
+    .nav-down i{
         display: block;
         cursor: pointer;
-    }
+    } */
 
     
 }
