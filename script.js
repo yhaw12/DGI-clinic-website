@@ -1,7 +1,8 @@
 // header
 
 window.addEventListener('scroll', ()=>{
-    document.querySelector('#header').classList.toggle('active');
+    document.querySelector('.top').classList.toggle('active');
+    document.querySelector('.down').classList.toggle('active');
 });
 
 
@@ -42,12 +43,38 @@ function changeSlider(){
 
 setInterval(changeSlider(), 1000);
 
+// select the video
+
+let videoBtn = document.getElementById('videoPlay');
+let bannerVideo = document.getElementById('backVideo');
+
+videoBtn.addEventListener('click', ()=>{
+    bannerVideo.style.display = 'block';
+    bannerImage.style.display = 'none';
+
+    
+    
+});
 
 
-// footer Date
+
+
+
+
+// footer 
 
 let footerDate = document.querySelector(".date");
+let footerBtn = document.querySelector(".fa-forward");
 
 const date = new Date().getFullYear();
-
 footerDate.textContent = date;
+
+footerBtn.addEventListener('click', ()=>{
+     window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+    
+});
+
+

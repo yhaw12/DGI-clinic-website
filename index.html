@@ -22,6 +22,8 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script>
     
     <title>Divine Medical Center</title>
 </head>
@@ -72,8 +74,12 @@
     <!-- Banner -->
     <section class="slides-wrapper">
 
-        <div class="image">
+        <div class="media">
             <img id="currentimg" src="images/pexels-pix (2).jpg">
+
+            <video loop autoplay muted id="backVideo">
+                <source src="images/pexels-rodnae-productions-6129939.mp4">
+            </video>
         </div>
         <div class="text">
             <h1>Quality care</h1>
@@ -84,7 +90,7 @@
             <div class="bt">
                 <button class="btn">Get in Touch</button>
 
-                <i class="fas fa-play circle fa-2x"></i>
+                <iconify-icon id="videoPlay"    icon="material-symbols:arrow-circle-right-rounded"></iconify-icon>
 
             </div>            
         </div>
@@ -92,7 +98,7 @@
 
 
     <!-- footer -->
-    <footer>
+    <section class="footerOne">
         <div class="main-container"> 
             <div class="sect1">
                 <div class="container">
@@ -161,14 +167,16 @@
                 </div>
             </div>
         </div>
-        <div class="small-container">
-            <div class="text">
-                <h5>Copyright &copy; <span class="date">2024</span> Design & Powered by Blankson Obeng</h5>
-            </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="items">
+            <h5>Copyright &copy; <span class="date">2024</span> Design & Powered by Blankson Obeng</h5>
+            <i class="fas fa-forward"></i>
         </div>
-
     </footer>
-
 
     <script src="script.js"></script>
 </body>
