@@ -50,10 +50,15 @@ let bannerVideo = document.getElementById('backVideo');
 
 videoBtn.addEventListener('click', ()=>{
     bannerVideo.style.display = 'block';
-    bannerImage.style.display = 'none';
+    bannerImage.style.display = 'none';  
+    videoBtn.innerHTML = '<i class="fas fa-close"></i>';
 
-    
-    
+    let imageBtn = document.querySelector('.fa-close');
+
+    imageBtn.addEventListener("click", ()=>{
+        bannerImage.style.display = 'block';
+        bannerVideo.style.display = 'none';
+    })
 });
 
 
