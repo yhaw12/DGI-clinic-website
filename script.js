@@ -5,17 +5,23 @@ window.addEventListener('scroll', ()=>{
     document.querySelector('.down').classList.toggle('active');
 });
 
-
+let menuList = document.querySelector(".list");
 let bars = document.querySelector('.fa-bars');
+let close = document.querySelector('.fa-close');
+
 
 bars.addEventListener('click', ()=>{
-    document.querySelector('.list').classList.toggle('show');
-    bars.classList.add('fa-times');  
+    menuList.classList.toggle('show'); 
+    bars.classList.add('fa-times');   
     
-    document.querySelector('.fa-times').addEventListener('click', ()=>{
-        bars.classList.replace('fa-times', 'fa-bars')   
-    });
-})
+    close.onclick =()=>{
+        menuList.classList.remove('show')
+        close.classList.add('fa-bars')
+    }
+});
+
+
+
 
 
 
@@ -51,7 +57,7 @@ let bannerVideo = document.getElementById('backVideo');
 videoBtn.addEventListener('click', ()=>{
     bannerVideo.style.display = 'block';
     bannerImage.style.display = 'none';  
-    videoBtn.innerHTML = '<i class="fas fa-close"></i>';
+    videoBtn.classList.add = '<i class="fas fa-close"></i>';
 
     let imageBtn = document.querySelector('.fa-close');
 
