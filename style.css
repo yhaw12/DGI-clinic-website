@@ -257,15 +257,16 @@ header.active{
 
 /* footer */
 
-.footerOne{
+footer{
     width: 100%;
-    height: auto;
+    height: 300px;
     padding: var(--section-padding);
+    background-color: aquamarine;
 }
-.footerOne .main-container{
+footer .main-container{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     transition: all 300ms ease;
 }
@@ -302,7 +303,7 @@ form input{
 
 form button{
     font-size: var(--p);
-    padding: 2rem 1rem;
+    padding:  1rem;
     cursor: pointer;   
 }
 
@@ -321,30 +322,42 @@ form button{
     padding: 1.2rem;
     border-radius: 50%;
     background-color: var(--p-color);
-
 }
-footer{
+
+.main-container .sect3 .bottom{
+    margin-top: var(--margin-bt);
+}
+
+
+/* footer{
     width: 100%;
     height: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     padding: var(--section-padding);
-}
-footer .items{
+} */
+.copyrightItems{
+    width: 100%;
+    height: 4rem;
+    position: relative;
+    background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-footer .items h5{
+.copyrightItems h5{
     font-size: 1rem;
 }
 
-footer .items i{
-    width: 2rem;
-    height: 2rem;
+.copyrightItems i{
+    width: 1.5rem;
+    height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 50%;
     cursor: pointer;
     background-color: var(--color-2);
@@ -464,17 +477,31 @@ footer .small-container .text{
     
 }
 
-@media (max-width:460px){
+@media (max-width:760px){
     html{
         font-size: 50%;
     }
-    .footerOne .main-container{
+    footer .main-container{
         width: 100%;
         text-align: center;
         position: absolute;
-        background-color: #Ec5E65;
         grid-template-columns: 1fr
+    }
+    .form form{
+        width: 80%;
+        margin: 0 auto;
+
     }  
+    .sect1,.sect2, .sect3{
+        width: 90%;
+        margin: 0 auto;
+         text-align: center;
+    }
+
+    footer .copyrightItems{
+        position: absolute;
+        
+    }
      
 }
 
