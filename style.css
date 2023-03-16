@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 :root{
-    --color-1: #Ec5E65;
-    --color-2: #5E6BCE;
-    --color-3: #E7F2F8;
+    --color-1: #003399;
+    --color-2: #0066cc;
+    --color-3: #add8e6;
     --p-color: #90929D;
-    --section-padding: 1rem 2%;
+    --text-color: #fff;
+    --section-padding: 1.5rem 3%;
     --h1: 6.2rem;
-    --h2: 2rem;
+    --h2: 2.5rem;
     --h3: 1.8rem;
-    --p: 1.6rem;
+    --p: 1.4rem;
     --margin-bt: 1.5rem;
 }
 
@@ -18,8 +20,7 @@
     text-decoration: none;
     list-style: none;
     border: none;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Gudea', sans-serif;
+    font-family: 'Merriweather', serif,'Gudea', sans-serif;
 }
 
 html{
@@ -52,7 +53,6 @@ a{
 header{
     width: 100%;
     height: auto;
-    /* background-color: #5E6BCE; */
     position: fixed;
     left: 0;
     right: 0;
@@ -64,9 +64,6 @@ header.active{
     position: sticky;
 }
 
-/* .down.active{
-    background-color: #fff;
-} */
 
 .top{
     display: flex;
@@ -84,48 +81,86 @@ header.active{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--section-padding);
-    background-color: var(--color-3); 
+    padding: .2rem 3%;
+    background-color: var(--color-2); 
 }
 
 .down .image img{
-    width: 8rem;
+    width: 7rem;
 }
 
 .down ul{
     position: relative;
-    height: auto!important;
-    margin-right: 10rem;
+    height: auto!important; 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all 300ms ease;
 }
 
 .down li{
     margin: 0 1rem;
     background: none;
+    position: relative;
 }
+
+.down li:hover::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--text-color);
+} 
 .down a{
     font-size: 1.3rem;
-    color: var(--p-color);
+    color: var(--text-color);
 }
 
 .down i{
     cursor: pointer;
 }
-.down .fa-close{
+.down .menu-icons{
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+     display: none;
+}
+.down .menu-icons .fa-close{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: -1;
+}
+.down .menu-icons .fa-bars{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+.down .menu-icons{
     display: none;
 }
 
 
+
 /* banner section */
 
-.slides-wrapper{
+ .slides-wrapper{
     width: 100%;
     height: 90vh;
     position: relative;
     margin-top: 10%;
-    overflow: hidden;
+    overflow-x: hidden;
     transition: all 300ms ease;
 }
 
@@ -150,7 +185,7 @@ header.active{
 
 .slides-wrapper .text{
     position: absolute;
-    top: 13rem;
+    top: 10rem;
     z-index: 1000;
     padding: 0 2%;
 }
@@ -171,8 +206,10 @@ header.active{
 }
 
 .slides-wrapper .bt{
+    width: 20rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .slides-wrapper .bt button{
@@ -183,17 +220,35 @@ header.active{
     border-radius: 40px;
     margin-right: 2rem;
 }
+.slides-wrapper .bt .video-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.slides-wrapper .bt iconify-icon{
+.slides-wrapper .bt .video-btn .fa-circle-play{
+    position: absolute;
+    z-index: 2;
     color: var(--color-2);
     padding: 1rem;
     cursor: pointer;
-    border: 2px solid;
     border-radius: 50%;
+
 }
+.slides-wrapper .bt .video-btn .fa-circle-pause{
+    position: absolute;
+    display: none; 
+    z-index: -1;
+    color: var(--color-2);
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%
+} */
+
 
 /* Our Activities Section */
-.our-activities{
+/* .our-activities{
     width: 100%;
     height: auto;
     padding: var(--section-padding);
@@ -233,35 +288,67 @@ header.active{
 /* .our-activities .card .image{
     text-align: center;
 } */
-.our-activities .bottom .card img{
-    width: 5rem;
+/* .our-activities .bottom .card i{
     margin-bottom: 1rem;
-}
+}  */
 
 /* .our-activities .bottom .card span{
     display: inline-flex;
     justify-content: center;
 
 } */
-.our-activities .bottom .card p{
+/* .our-activities .bottom .card p{
     margin-top: 1rem;
+} */
+
+/* About Us */
+
+/* .our-clinic{
+    width: 100%;
+    height: 700px;
+    padding: var(--section-padding);
+}
+.our-clinic .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    transition: all 300ms ease;
 }
 
+.our-clinic .container .left-side{
+    flex-basis: 40%;
+}
+.our-clinic .container .left-side .text h2{
+    font-size: var(--h2);
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+.our-clinic .container .left-side .text p{
+    font-size: var(--p);
+    word-spacing: 2px;
+    line-height: 30px;
+}
 
+.our-clinic .container .right-side{
+    flex-basis: 50%;
+}
 
-
-
-
-
+.our-clinic .right-side .image img{
+    width: 700px;
+    height: 400px;
+}
+ */
 
 
 /* footer */
 
-footer{
+/* footer{
     width: 100%;
-    height: 300px;
+    height: auto;
+    color: #fff;
     padding: var(--section-padding);
-    background-color: aquamarine;
+    background-color: var(--color-2);
 }
 footer .main-container{
     position: relative;
@@ -269,6 +356,9 @@ footer .main-container{
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     transition: all 300ms ease;
+}
+.container .tops h2{
+    font-size: 2rem;
 }
 .main-container .sect1 .container .list{
     margin-top: 2rem;
@@ -278,12 +368,12 @@ footer .main-container{
 }
 
 .sect1 .list li a{
-    color: var(--p-color);
+    color: #fff;
     font-size: var(--p);
-}
+} */
 /* footer middle section */
 
-.sect2 .form{
+/* .sect2 .form{
     width: 100%;
     margin-top: 2rem;
 }
@@ -292,6 +382,9 @@ footer .main-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: #fff;
 }
 
 form input{
@@ -304,6 +397,7 @@ form input{
 form button{
     font-size: var(--p);
     padding:  1rem;
+    border-radius: 5px;
     cursor: pointer;   
 }
 
@@ -317,34 +411,35 @@ form button{
     margin-bottom: 1rem;
 }
 
-.sect2 .socials i{
+.sect2 .socials .icons i{
     color: var(--color-2);
-    padding: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 2rem;
+    margin-bottom: .5rem;
     border-radius: 50%;
-    background-color: var(--p-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
 }
 
 .main-container .sect3 .bottom{
     margin-top: var(--margin-bt);
 }
 
+.main-container .sect3 .container .icon{
+    margin: .5rem 0;
+}
 
-/* footer{
-    width: 100%;
-    height: 40px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: var(--section-padding);
-} */
 .copyrightItems{
     width: 100%;
-    height: 4rem;
-    position: relative;
-    background-color: red;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-top: 1px solid #fff;
+    padding-top: 1rem;
 }
 
 .copyrightItems h5{
@@ -362,23 +457,17 @@ form button{
     cursor: pointer;
     background-color: var(--color-2);
 }
- 
-
-
-
-
-
-
+  */
 
 /* last section */
-/* .main-container .sect3 .container .bottom{
+.main-container .sect3 .container .bottom{
     margin-top: 2rem;
     padding: .5rem 0;
-} */
+} 
 
 
-/* footer bottom */
-  /* .small-container{
+footer bottom 
+   .small-container{
     padding-top: 1rem;
     border-top: 2px solid var(--p-color);   
 }
@@ -387,25 +476,7 @@ form button{
 footer .small-container .text{
     text-align: center;
     font-size: var(--p);
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} 
 
 
 /* meadia queris */
@@ -422,24 +493,32 @@ footer .small-container .text{
         height: 100%;
     }
 } */
+
 @media (max-width:1320px){
+    
     html{
-        font-size: 80%;
+        font-size: 90%;
     }
 
     .image img{
         width: 3rem;
     }
+   
+
+    .down .menu-icons{
+        display: block;
+    } 
 
     .down ul{
         position: absolute;
-        display: none;
         top: 100%;
-        right: 3%;
-        width: 300px;
-        padding: 1rem; 
-        z-index: 10000;
-        transition: all 300ms ease;
+        right: 0;
+        bottom: 0;
+        display: none;
+        width: 250px;
+        height: 100vh;
+        z-index: 1000;
+        background-color: #5E6BCE;
     }
 
     .down ul.show{
@@ -448,61 +527,103 @@ footer .small-container .text{
 
     .down li{
         width: 100%;
-        margin: 1rem 0;
-        padding: .6rem;
+        margin: 3rem 0;
+        padding: 1rem;
         background-color: #e2e3e7;
     }
 
-    .down i{
-        display: block;
-        cursor: pointer;
-    }
     .slides-wrapper{
         margin-top: 10%;
-    }     
+    }
+    .our-clinic .container{
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    .our-clinic .container .left-side .text h2{
+        text-align: center;
+    }
 } 
 
 @media (max-width:920px){
     html{
-        font-size: 70%;
+        font-size: 85%;
     }
     .slides-wrapper{
         margin-top: 18%;
     }
-    /* .slides-wrapper .media{
+
+    .slides-wrapper .media{
         width: 100%;
-        height: 40%;
-        object-fit: cover;
-    } */
+        height: 50%;
+        outline: 2px solid red;
+    }
     
+    .slides-wrapper .media img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .slides-wrapper .media video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 @media (max-width:760px){
     html{
-        font-size: 50%;
+        font-size: 70%;
     }
-    footer .main-container{
-        width: 100%;
+
+     .slides-wrapper .media img{
+        height: 300px;
+    }
+    .slides-wrapper .media video{
+        height: 300px;
+    } 
+    
+
+     .our-activities{
+        margin: 0 auto;
+        outline: 2px solid red;
+    }
+
+    .our-activities .bottom .card{
         text-align: center;
-        position: absolute;
-        grid-template-columns: 1fr
+    }
+
+    .our-clinic .right-side .image img{
+        width: 90%;
+        height: 80%;
+    }
+    footer{
+        padding: 2rem 3% 0;
+    }
+
+    footer .main-container{
+        text-align: center;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
     }
     .form form{
         width: 80%;
         margin: 0 auto;
-
+ 
     }  
     .sect1,.sect2, .sect3{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-         text-align: center;
-    }
-
-    footer .copyrightItems{
-        position: absolute;
-        
-    }
-     
+        margin-bottom: 2rem;
+    } 
 }
 
+/* For screens smaller than 760px */
+/* @media screen and (max-width: 760px) {
+    section {
+      margin: 0;
+      padding: 0;
+    }
+  } */
+  
 

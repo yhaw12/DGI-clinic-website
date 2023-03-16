@@ -1,10 +1,11 @@
 // header
-
 window.addEventListener('scroll', ()=>{
     document.querySelector('.top').classList.toggle('active');
     document.querySelector('.down').classList.toggle('active');
 });
 
+
+// menu side section
 let menuList = document.querySelector(".list");
 let bars = document.querySelector('.fa-bars');
 let close = document.querySelector('.fa-close');
@@ -12,14 +13,17 @@ let close = document.querySelector('.fa-close');
 
 bars.addEventListener('click', ()=>{
     menuList.classList.toggle('show'); 
-    bars.classList.add('fa-times');   
-    
-    close.onclick =()=>{
-        menuList.classList.remove('show')
-        close.classList.add('fa-bars')
-    }
+    bars.style.display = 'none';
+    close.style.display = 'block'
+    bars.style.transition = 'all 300ms ease'
 });
 
+close.onclick =()=>{
+    menuList.classList.remove('show')
+    bars.style.display = 'block'
+    close.style.display = 'none'
+    close.style.transition = 'all 300ms ease'
+}
 
 
 
@@ -57,15 +61,22 @@ let bannerVideo = document.getElementById('backVideo');
 videoBtn.addEventListener('click', ()=>{
     bannerVideo.style.display = 'block';
     bannerImage.style.display = 'none';  
-    videoBtn.classList.add = '<i class="fas fa-close"></i>';
+    closeBtn.style.display = 'block'
+    videoBtn.style.display = 'none'
 
-    let imageBtn = document.querySelector('.fa-close');
-
-    imageBtn.addEventListener("click", ()=>{
-        bannerImage.style.display = 'block';
-        bannerVideo.style.display = 'none';
-    })
+    videoBtn.style.transition = 'all 300ms ease'
 });
+
+let closeBtn = document.querySelector('.fa-circle-pause');
+
+closeBtn.addEventListener("click", ()=>{
+    bannerImage.style.display = 'block';
+    bannerVideo.style.display = 'none';
+    videoBtn.style.display ='block'
+    closeBtn.style.display = 'none';
+
+    closeBtn.style.transition = 'all 300ms ease'
+})
 
 
 

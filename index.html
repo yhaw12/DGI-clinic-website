@@ -19,7 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gudea&display=swap" rel="stylesheet">
 
-
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -44,7 +46,7 @@
             <div class="social-media">
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
 
             </div>
         </nav>
@@ -52,7 +54,7 @@
         <!-- bottom navigation -->
         <nav class="down">
             <div class="image">
-                <img src="images/dgi-clinic.jpg" alt="kasoa best clinic">
+                <img src="images/dgi-clinics.png" alt="kasoa best clinic">
             </div>
 
             <ul class="list">
@@ -65,7 +67,7 @@
 
             <div class="menu-icons">
                 <i class="fas fa-bars fa-2x"></i>
-                <i class="fas fa-close fa-2x"></i>
+                <i class="fas fa-close fa-2x"></i> 
             </div>
         </nav>
     </header>
@@ -90,14 +92,16 @@
             <div class="bt">
                 <button class="btn">Get in Touch</button>
 
-                <iconify-icon id="videoPlay"    icon="material-symbols:arrow-circle-right-rounded"></iconify-icon>
-                
+                <div class="video-btn">
+                    <i id="videoPlay" class="fa-regular fa-circle-play fa-4x"></i>
+                    <i class="fa-regular fa-circle-pause fa-4x"></i>
+                </div>                
             </div>            
         </div>
-    </section>
+    </section> 
     
     
-        <section class="our-activities">
+    <!-- <section class="our-activities">
         <div class="top-tex">
             <div class="text">
                 <h4>Welcome</h4>
@@ -108,7 +112,7 @@
         <div class="bottom">
             <div class="card">
                 <div class="image">
-                    <img src="#">
+                    <i class="fa-solid fa-user-doctor fa-7x"></i>
                 </div>
                 <div class="desc">
                     <span>Qualified doctors</span>    
@@ -118,7 +122,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="#">
+                    <i class="fa-solid fa-hospital-user fa-7x"></i>
                 </div>
                 <div class="desc">
                     <span>Emergency care</span>    
@@ -128,7 +132,7 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="#">
+                    <i class="fa-solid fa-clock fa-7x"></i>
                 </div>
                 <div class="desc">
                     <span>24 Hours Service</span>    
@@ -138,8 +142,27 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae beatae pariatur quibusdam, non incidunt dicta obcaecati distinctio officia quasi inventore!</p>
             </div>
         </div>
-
     </section>
+
+    <section class="our-clinic">
+        <div class="container">
+            <div class="left-side">
+                <div class="text">
+                    <h2>Why choose our clinic</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla pariatur incidunt repellat nobis tempora saepe doloremque consequuntur impedit voluptates culpa, qui odio animi iste. Ratione magnam aperiam quos neque fuga.
+                    <br><br>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aspernatur quaerat eos eveniet quos placeat optio iusto beatae dolor, voluptatem temporibus minus, quia sed impedit ducimus ea excepturi facere nulla.   
+                    </p>
+
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="image">
+                    <img src="images/image1 (1).jpeg" alt="community outreach in kasoa">
+                </div>
+            </div>
+        </div>
+    </section> -->
 
 
     <!-- footer -->
@@ -147,7 +170,7 @@
         <div class="main-container"> 
             <div class="sect1">
                 <div class="container">
-                    <div class="top">
+                    <div class="tops">
                         <h2>Our Services</h2>
                     </div>
                     <ul class="list">
@@ -161,7 +184,7 @@
             </div>
             <div class="sect2">
                 <div class="container">
-                    <div class="top">
+                    <div class="tops">
                         <h2>Sign Up for the Latest Updates</h2>
                     </div>
                     <div class="form">
@@ -184,7 +207,7 @@
             </div>
             <div class="sect3">
                 <div class="container">
-                    <div class="top">
+                    <div class="tops">
                         <h2>Contact Us</h2>
                     </div>
 
@@ -194,18 +217,18 @@
                             <span>0244760710</span>
                         </div>
             
-                        <div class="location">
+                        <div class="icon">
                             <i class="fa-sharp fa-solid fa-location-dot"></i>
                             <span> Kasoa 2nd Bus Stop</span>
                         </div>
-                        <div class="contact">
-                            <i class="fas fa-phone"></i>
-                            <span>0244760710</span>
+                        <div class="icon">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>24 hour Service</span>
                         </div>
             
-                        <div class="location">
-                            <i class="fa-sharp fa-solid fa-location-dot"></i>
-                            <span> Kasoa 2nd Bus Stop</span>
+                        <div class="icon">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>divinegroupinternational@gmail.com</span>
                         </div>
                     </div>
 
@@ -213,16 +236,12 @@
             </div>
         </div>
         <div class="copyrightItems">
-            <h5>Copyright &copy; <span class="date">2024</span> Design & Powered by Blankson Obeng</h5>
-            <i class="fas fa-forward"></i>
+            <h5>Copyright &copy; <span class="date">2024</span> Design & Powered by Blankson Obeng</h5> 
+             <!-- <i class="fas fa-forward"></i> -->
+             <i class="fa-solid fa-arrow-up"></i>
         </div>
 
     </footer>
-
-    <!-- footer -->
-    <!-- <footer>
-        
-    </footer> -->
 
     <script src="script.js"></script>
 </body>
