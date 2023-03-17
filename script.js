@@ -33,7 +33,6 @@ close.onclick =()=>{
 
 
 let bannerImage = document.querySelector('#currentimg');
-
 let currentIndex = 0
 
 let imagesArray = [
@@ -74,8 +73,8 @@ closeBtn.addEventListener("click", ()=>{
     bannerVideo.style.display = 'none';
     videoBtn.style.display ='block'
     closeBtn.style.display = 'none';
+    closeBtn.style.transition = 'all 300ms ease';
 
-    closeBtn.style.transition = 'all 300ms ease'
 })
 
 
@@ -86,7 +85,7 @@ closeBtn.addEventListener("click", ()=>{
 // footer 
 
 let footerDate = document.querySelector(".date");
-let footerBtn = document.querySelector(".fa-forward");
+let footerBtn = document.querySelector(".fa-arrow-up");
 
 const date = new Date().getFullYear();
 footerDate.textContent = date;
