@@ -1,3 +1,4 @@
+
 // header
 window.addEventListener('scroll', ()=>{
     document.querySelector('.top').classList.toggle('active');
@@ -30,7 +31,6 @@ close.onclick =()=>{
 
 
 // select the displayed image
-
 
 let bannerImage = document.querySelector('#currentimg');
 let currentIndex = 0
@@ -98,4 +98,36 @@ footerBtn.addEventListener('click', ()=>{
     
 });
 
+// popup................................
+const popup = document.querySelector('.popup');
+// const closeBtn = document.querySelector('#close-btn');
 
+window.addEventListener('load', () => {
+	popup.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', () => {
+	popup.style.display = 'none';
+});
+
+
+// contact page
+const form = document.getElementById('contact-form');
+const status = document.getElementById('status');
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
+	const formData = new FormData(form);
+	const xhr = new XMLHttpRequest();
+	xhr.open('POST', form.getAttribute('action'));
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			form.reset();
+			status.innerHTML = 'Thank you for your message!';
+		} else {
+			status.innerHTML = 'Oops! There was a problem.';
+		}
+	};
+	xhr.send(new URLSearchParams(formData).toString());
+});
