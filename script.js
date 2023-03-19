@@ -100,13 +100,13 @@ footerBtn.addEventListener('click', ()=>{
 
 // popup................................
 const popup = document.querySelector('.popup');
-// const closeBtn = document.querySelector('#close-btn');
+const popBtn = document.querySelector('#pop-btn');
 
 window.addEventListener('load', () => {
 	popup.style.display = 'flex';
 });
 
-closeBtn.addEventListener('click', () => {
+popBtn.addEventListener('click', () => {
 	popup.style.display = 'none';
 });
 
