@@ -38,6 +38,7 @@ let currentIndex = 0
 let imagesArray = [
     "images/pexels-pix (2).jpg",
     "images/pexels-pix (3).jpg",
+    "images/pexels-pix (3).jpg",
 ]
 
 
@@ -103,31 +104,38 @@ const popup = document.querySelector('.popup');
 const popBtn = document.querySelector('#pop-btn');
 
 window.addEventListener('load', () => {
-	popup.style.display = 'flex';
+    popup.style.display = 'flex';
 });
 
-popBtn.addEventListener('click', () => {
-	popup.style.display = 'none';
-});
+let popPrompt = ()=>{
+    popBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+    }); 
+}
 
+setTimeout(popPrompt(), 5000)
+
+
+
+// if popup button is not pressed in the first 5 seconds popup is automatically removed...... to be continued
 
 // contact page
-const form = document.getElementById('contact-form');
-const status = document.getElementById('status');
+// const form = document.getElementById('contact-form');
+// const status = document.getElementById('status');
 
-form.addEventListener('submit', (event) => {
-	event.preventDefault();
-	const formData = new FormData(form);
-	const xhr = new XMLHttpRequest();
-	xhr.open('POST', form.getAttribute('action'));
-	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			form.reset();
-			status.innerHTML = 'Thank you for your message!';
-		} else {
-			status.innerHTML = 'Oops! There was a problem.';
-		}
-	};
-	xhr.send(new URLSearchParams(formData).toString());
-});
+// form.addEventListener('submit', (event) => {
+// 	event.preventDefault();
+// 	const formData = new FormData(form);
+// 	const xhr = new XMLHttpRequest();
+// 	xhr.open('POST', form.getAttribute('action'));
+// 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+// 	xhr.onreadystatechange = function() {
+// 		if (xhr.readyState === 4 && xhr.status === 200) {
+// 			form.reset();
+// 			status.innerHTML = 'Thank you for your message!';
+// 		} else {
+// 			status.innerHTML = 'Oops! There was a problem.';
+// 		}
+// 	};
+// 	xhr.send(new URLSearchParams(formData).toString());
+// });

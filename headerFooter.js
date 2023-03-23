@@ -1,5 +1,17 @@
-let pagesHeader = document.getElementById('pages-header');
 
+
+fetch('index.html')
+.then(res=>res.text())
+.then(data =>{
+    headParse = new DOMParser();
+    headDoc = headParse.parseFromString(data, 'text/html');
+    headElement = headDoc.querySelector('#head');
+    headDocElContent = headElement.innerHTML;
+    document.querySelector('.about-head').innerHTML = headDocElContent;
+})
+
+
+let pagesHeader = document.getElementById('pages-header');
 
 // PageHeaders===========
 fetch('index.html')
