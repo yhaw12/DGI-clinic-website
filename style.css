@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 :root{
     --color-1: #F3F8FC;
-    --color-2: #0066cc;
+    --color-2: gray;
     --color-4: #68B6B2;
     --color-3: #add8e6;
     --p-color: #90929D;
@@ -222,6 +222,11 @@ header.active{
     height: 800px;
     object-fit: cover;
     aspect-ratio: 2/3;
+    opacity: 0;
+}
+
+.slides-wrapper .media#currentimg{
+    opacity: 1;    
 }
 
 .slides-wrapper .media video{
@@ -965,21 +970,19 @@ form textarea {
 /* about us map */
 .about-us .map{
     width: 100%;
-    height: 600px;
+    height: auto;
     padding: var(--section-padding);
-    outline: 2px solid red;
+    
 }
 
-.map .card{
-    margin: 0 auto;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
+.about-us .map .card{
+   width: 100%;
+   height: 35rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   outline: 2px solid red;
 }
-
-.card .right-side .image{
-    display: grid;
-    place-items: center;
-
+.about-us .map .card.right-side img{
+    height: 100%;
 }

@@ -53,6 +53,24 @@ function changeSlider(){
 
 setInterval(changeSlider(), 1000);
 
+// const slider = document.querySelector('.slider');
+// 		const images = slider.querySelectorAll('img');
+// 		let currentIndex = 0;
+
+// 		function updateSlider() {
+// 			images.forEach((image, index) => {
+// 				if (index === currentIndex) {
+// 					image.classList.add('active');
+// 				} else {
+// 					image.classList.remove('active');
+// 				}
+// 			});
+// 			currentIndex = (currentIndex + 1) % images.length;
+// 			setTimeout(updateSlider, 3000); // Change every 3 seconds
+// 		}
+
+// 		updateSlider();
+
 // select the video
 
 let videoBtn = document.getElementById('videoPlay');
