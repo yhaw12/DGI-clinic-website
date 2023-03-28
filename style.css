@@ -644,158 +644,8 @@ footer .small-container .text{
 } 
 
 
-/* meadia queris */
-
-/* @media (min-aspect-ratio: 16/9){
-    #backVideo{
-        width: 100%;
-        height: auto;
-    }
-}
-@media (max-aspect-ratio: 16/9){
-    #backVideo{
-        width: auto;
-        height: 100%;
-    }
-} */
-
-@media (max-width:1320px){   
-    html{
-        font-size: 90%;
-    }
-
-    .image img{
-        width: 3rem;
-    }
-    .down .menu-icons{
-        display: block;
-    } 
-
-    .down ul{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        bottom: 0;
-        display: none; 
-        width: 200px;
-        height: 100vh;
-        z-index: 1000;
-        background-color: var(--color-2);
-
-    }
-
-    .down ul.show{
-         display: block;
-    }
-
-    .down li{
-        width: 100%;
-        margin: 2rem 1rem;
-        padding: 1rem;
-    }
-
-    .slides-wrapper{
-        margin-top: 5%;
-    }
-
-    .slides-wrapper .text{
-        top: 10rem;
-    }
-    .our-clinic .container{
-        flex-direction: column-reverse;
-        gap: 2rem;
-        text-align: center;
-        height: auto;
-    }
-    .our-clinic .container .left-side .text h2{
-        text-align: center;
-    }
-    .our-clinic .right-side .image img{
-        width: 70%;
-        height: auto;
-    }
-} 
-
-@media (max-width:920px){
-    html{
-        font-size: 85%;
-    }
-    .slides-wrapper{
-        margin-top: 14.5%;
-    }
-    .slides-wrapper .text{
-        top: 4rem;
-    }
-
-    .slides-wrapper .media{
-        width: 100%;
-        height: 85%;
-    }
-}
-
-@media (max-width:760px){
-    html{
-        font-size: 70%;
-    }
-    .slides-wrapper{
-        margin-top: 15%;
-    }
-
-    .slides-wrapper .text{
-        top: 9rem;
-    }
-    .slides-wrapper .media{
-        width: 100%;
-        height: 95%;
-    } 
-    
-    .our-activities .bottom {
-        text-align: center;
-    }
-
-    .our-clinic .right-side .image img{
-        width: 90%;
-        height: auto;
-    }
-    .specialist .bottom-section .cards{
-        grid-template-columns: 1fr;
-        outline: 2px solid ;
-    }
-    .specialist .bottom-section .card{
-        width: 90%;
-    }
-    footer{
-        padding: 2rem 3% 0;
-    }
-
-    footer .main-container{
-        text-align: center;
-        margin: 0 auto;
-        grid-template-columns: 1fr;
-    }
-    .form form{
-        width: 80%;
-        margin: 0 auto;
- 
-    }  
-    .sect1,.sect2, .sect3{
-        width: 100%;
-        margin: 0 auto;
-        margin-bottom: 2rem;
-    } 
-}
-
-/* For screens smaller than 760px */
-/* @media screen and (max-width: 760px) {
-    section {
-      margin: 0;
-      padding: 0;
-    }
-  } */
-  
 
 /* Contact Page ============= */
-
 #container {
 	max-width: 400px;
 	margin: 12rem auto 3rem;
@@ -867,52 +717,55 @@ form textarea {
 
 
 
-/* About Page */
+/* About Page ===================*/
 .about-us{
     width: 100%;
-    height: auto;
+    height: auto; 
     padding: var(--section-padding);
     font-size: var(--p);
+    background-color: var(--color-1);
 }
 
 .about-us .container{
     /* margin: 6rem 3rem 0;  */
+    height: auto;
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
 }
-.about-us .left-side{
+.about-us .container .Cont-leftSide{
     flex-basis: 30%;
 }
 
-.about-us .image img{
-    max-width: 800px;
+.about-us .container .Cont-leftSide .image img{
+    width: clamp(250px, 50vw, 450px);
     height: 500px;
+    max-width: 600px;
+    object-fit: cover;
 }
 
-
-.about-us .right-side{
+.about-us .Cont-rightSide{
     flex-basis: 70%;
     margin-top: 10rem;
 }
 
-.about-us .right-side ul{
+.about-us .Cont-rightSide ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 2rem 0;
 }
 
-.about-us .right-side .links .services{
+.about-us .Cont-rightSide .links .services{
     display: flex;
     align-items: center;
 }
 
-.about-us .right-side li{
+.about-us .Cont-rightSide li{
     margin: .5rem 0;
 }
 
-.about-us .right-side i{
+.about-us .Cont-rightSide i{
     margin-right: .2rem;
     color: var(--color-1);
     background-color: var(--color-2);
@@ -924,9 +777,9 @@ form textarea {
     justify-content: center;
 }
 
-.about-us .right-side .text .appointment{
+.about-us .Cont-rightSide .text .appointment{
     width: 100%;
-    height: 5rem;
+    height: auto;
     border-radius: 5px;
     padding: 1rem;
     display: flex;
@@ -936,22 +789,22 @@ form textarea {
     margin-bottom: 2rem;
 }
 
-.about-us .right-side .text .appointment .left-side{
+.about-us .Cont-rightSide .text .appointment .appSide{
     display: inline-flex;
     align-items: center;
-    flex-basis: 70%;
+    flex-basis: 80%;
 }
-.about-us .right-side .text .appointment .left-side h6{
+.about-us .Cont-rightSide .text .appointment .appSide span{
+    margin-left: .2rem;
+}
+.about-us .Cont-rightSide .text .appointment .appSide h6{
     font-size: var(--p);
     color: var(--color-1);
 }
-
-
-
-.about-us .right-side .appointment button{
-    width: 10rem;
+.about-us .Cont-rightSide .appointment button{
+    width: 12rem;
     height: 2rem;
-    padding: 1rem 2rem;
+    padding: 1.5rem;
     border-radius: 5px;
     font-size: 1rem;
     display: flex;
@@ -967,22 +820,321 @@ form textarea {
     font-weight: bolder;
 }
 
-/* about us map */
+
+
+/* about us map  and card*/
 .about-us .map{
     width: 100%;
     height: auto;
-    padding: var(--section-padding);
-    
+    padding: var(--section-padding);    
 }
 
 .about-us .map .card{
    width: 100%;
-   height: 35rem;
+   height: 100%;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   outline: 2px solid red;
+   gap: .5rem;
 }
-.about-us .map .card.right-side img{
-    height: 100%;
+
+.about-us .map .card .left-mapCard{
+    flex-basis: 25%;
 }
+/* map right side */
+.about-us .map .card .right-mapCard{
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    flex-basis: 75%;
+    /* justify-content: space-between; */
+    margin: auto; 
+    /* padding: 1rem; */
+    height: auto;
+}
+
+.about-us .map .card .right-mapCard .left-smcard{
+    flex-basis: 60%;
+    width: 100%;
+    width: clamp(auto, 50vw, 500px); 
+    height: auto;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 0  20px var(--color-3) ;
+}
+.about-us .map .card .right-mapCard .left-smcard form{
+    margin-top: 2rem;
+   
+}
+.about-us .map .card .right-mapCard .left-smcard form .label-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: .4rem;
+}
+
+.about-us .map .card .right-mapCard .left-smcard form .label-card{
+    margin-bottom: 1rem;
+}
+.about-us .map .card .right-mapCard .left-smcard form .label-card input{
+    border-bottom: 1px solid var(--p-color);
+}
+.about-us .map .card .left-smcard .label-card input::placeholder{
+    color: rgba(0,0,0,0.4);
+    font-size: 1rem;
+}
+.about-us .map .card .right-mapCard .left-smcard form .label-text textarea{
+    margin-top: 1rem;
+    height: 7rem;
+}
+.about-us .map .card .right-mapCard .left-smcard form .xxx{
+    display: none;
+}
+
+.about-us .map .card .right-mapCard .left-smcard form button{
+    background: var(--color-2);
+    color: var(--color-1);
+    width: 8rem;
+    height: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    cursor: pointer;
+}
+
+/* map right side location card */
+.about-us .map .card .right-mapCard .right-smcard{
+    flex-basis: 30%;
+    height: inherit;
+    padding: 1rem;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, var(--color-2), var(--color-3));
+}
+.about-us .map .card .right-mapCard .right-smcard i{
+    font-size: .5rem;
+}
+
+.about-us .map .card .right-mapCard .right-smcard .tops{
+    margin-bottom: 3rem;
+}
+.about-us .map .card .right-mapCard .right-smcard .tops span{
+    font-size: .7rem;
+}
+.about-us .map .card .right-mapCard .right-smcard .bottom .icon{
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+.about-us .map .card .right-mapCard .right-smcard .bottom .icon a{
+    font-size: .8rem;
+}
+.about-us .map .card .right-mapCard .right-smcard .social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0 1rem;
+    text-align: center;
+}
+
+
+/* meadia queris */
+
+/* @media (min-aspect-ratio: 16/9){
+    #backVideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    #backVideo{
+        width: auto;
+        height: 100%;
+    }
+} */
+
+@media (max-width:1320px){   
+    html{
+        font-size: 90%;
+    }
+
+    .image img{
+        width: 3rem;
+    }
+    .down .menu-icons{
+        display: block;
+    } 
+
+    .down ul{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        bottom: 0;
+        display: none; 
+        width: 200px;
+        height: 100vh;
+        z-index: 1000;
+        background-color: var(--color-2);
+    }
+
+    .down ul.show{
+         display: block;
+    }
+
+    .down li{
+        width: 100%;
+        margin: 2rem 1rem;
+        padding: 1rem;
+    }
+
+    .slides-wrapper{
+        margin-top: 5%;
+    }
+
+    .slides-wrapper .text{
+        top: 10rem;
+    }
+    .our-clinic .container{
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+        height: auto;
+    }
+    .our-clinic .container .left-side .text h2{
+        text-align: center;
+    }
+    .our-clinic .right-side .image img{
+        width: 70%;
+        height: auto;
+    }
+
+    .map .card .left-mapCard .image iframe{
+        width: auto;
+        height: 300px;
+        margin-top: 3rem;
+    }
+} 
+
+@media (max-width:920px){
+    html{
+        font-size: 85%;
+    }
+    .slides-wrapper{
+        margin-top: 14.5%;
+    }
+    .slides-wrapper .text{
+        top: 4rem;
+    }
+
+    .slides-wrapper .media{
+        width: 100%;
+        height: 85%;
+    }
+
+    .about-us .container{
+        flex-direction: column;
+    }
+
+    .about-us .container .Cont-leftSide{
+        /* margin-top: 1rem; */
+    }
+    .about-us .container .Cont-leftSide .image img{
+        height: 300px;
+        margin-top: 10rem;
+    }
+
+    .about-us .container .Cont-rightSide{
+        margin-top: 2rem;
+    }
+
+    .about-us .Cont-rightSide .text{
+        margin-bottom: 3rem;
+    }
+
+    .about-us .map .card {
+        flex-direction: column;
+        /* height: 500px; */
+    }
+
+    .map .card .right-mapCard{
+        flex-direction: column;
+    }
+     .map .card .right-mapCard .right-smcard{
+        display: none; 
+    } 
+    
+}
+
+@media (max-width:760px){
+    html{
+        font-size: 70%;
+    }
+    .slides-wrapper{
+        margin-top: 15%;
+    }
+
+    .slides-wrapper .text{
+        top: 9rem;
+    }
+    .slides-wrapper .media{
+        width: 100%;
+        height: 95%;
+    } 
+    
+    .our-activities .bottom {
+        text-align: center;
+    }
+
+    .our-clinic .right-side .image img{
+        width: 90%;
+        height: auto;
+    }
+    .specialist .bottom-section .cards{
+        grid-template-columns: 1fr;
+        outline: 2px solid ;
+    }
+    .specialist .bottom-section .card{
+        width: 90%;
+    }
+    footer{
+        padding: 2rem 3% 0;
+    }
+
+    footer .main-container{
+        text-align: center;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+    }
+    .form form{
+        width: 80%;
+        margin: 0 auto;
+ 
+    }  
+    .sect1,.sect2, .sect3{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    } 
+
+    .about-us .map .card .right-mapCard .left-smcard {
+        padding: 2rem;
+    }
+    
+    .about-us .map .card .right-mapCard .left-smcard form .label-container{
+        /* display: block; */
+        grid-template-columns: 1fr;
+    }
+
+    .about-us .map .card .right-mapCard form  .label-card input{
+        margin-left: 2rem;
+    }
+}
+
+/* For screens smaller than 760px */
+/* @media screen and (max-width: 760px) {
+    section {
+      margin: 0;
+      padding: 0;
+    }
+  } */
+  

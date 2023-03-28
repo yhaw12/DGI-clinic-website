@@ -37,14 +37,13 @@
     </header>
 
     <section class="about-us">
-
         <div class="container">
-            <div class="left-side">
+            <div class="Cont-leftSide">
                 <div class="image">
                     <img src="images/dgi.jpg" alt="clinic in kasoa">
                 </div>
             </div>
-            <div class="right-side">
+            <div class="Cont-rightSide">
                 <span>
                     Our Aim is to provide clinical services for the poor and vulnerable in our society. We are within the confines of Kasoa, specifically located Second Bus Stop. We offer an extensive range of general medical Specialist and diagnostic services. They are as follows;
                 </span>
@@ -76,7 +75,7 @@
                     <!-- <h2>about our clinic</h2> -->
 
                     <div class="appointment">
-                        <div class="left-side">
+                        <div class="appSide">
                             <i class="fas fa-hospital"></i> 
                             <span> Looking for a competent medical facility for your health needs at Kasoa? <h6>dont hesitate to contact us.</h6></span>
                         </div>
@@ -112,35 +111,50 @@
 
         <div class="map">
             <div class="card">
-                <div class="left-side">
+                <div class="left-mapCard">
                     <div class="image">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3971.2188047162053!2d-0.4194325!3d5.53453!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfbb8537e77723%3A0x1be28a7ea6896355!2s....!5e0!3m2!1sen!2sgh!4v1679437896880!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3971.2188047162053!2d-0.4194325!3d5.53453!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfbb8537e77723%3A0x1be28a7ea6896355!2s....!5e0!3m2!1sen!2sgh!4v1679437896880!5m2!1sen!2sgh" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="right-side">
-                        <div class="left-card">
+                <div class="right-mapCard">
+                        <div class="left-smcard">
                             <h2>Contact Us</h2>
-                            <span> Any qiestion or remarks? Just write us a message</span>
+                            <span> Any question or remarks? Just write us a message</span>
                             <form id="contact-form" method="post" action="">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your name " required>
-                    
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    
-                                <label for="message">Message:</label>
-                                <textarea  rows="8" id="message" name="message" required></textarea>
-                                
-                                <button type="submit">Send</button>
+
+                                <div class="label-container">
+                                    <div class="label-card">
+                                        <label for="name">Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Enter your name " required> 
+                                    </div>
+                                    <div class="label-card">
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="label-card">
+                                        <label for="phone">Phone:</label>
+                                        <input type="numebr" id="phone" name="phone"
+                                        placeholder="Enter your phone" required maxlength="10">
+                                    </div>
+                                    
+                                </div>
+                                <div class="label-text">
+                                    <label for="message">Message:</label>
+                                    <textarea cols="1" rows="8" id="message" name="message" required placeholder="type your message"></textarea>
+                                </div
+                                             
+                                <button class="xxx"></button>
+                                <button>Send</button>
                             </form>
                         </div>
-                        <div class="right-card">
-                            <h3>Contact Information</h3>
-                            <span>Fill up the form and our Team will get back to within 24 hours</span>
-
-
+                        <div class="right-smcard">
+                            <div class="tops">
+                                <h3>Contact Information</h3>
+                                <span>Fill up the form and our Team will get back to within 24 hours</span>
+                            </div>
+                            
                             <div class="bottom">
-                                <div class="contact">
+                                <div class="icon">
                                     <i class="fas fa-phone"></i>
                                     <a href="tel:+233244760710">Call us now</a>
                                 </div>
@@ -151,7 +165,7 @@
                                 </div>
                                 <div class="icon">
                                     <i class="fa-solid fa-clock"></i>
-                                    <span>24 hour Service</span>
+                                    <a>24 hour Service</a>
                                 </div>
                     
                                 <div class="icon">
@@ -172,7 +186,6 @@
     </section>
 
     <footer class="pages-footer">
-
     </footer>
 <script src="script.js"></script>
 <script src="headerFooter.js"></script>
