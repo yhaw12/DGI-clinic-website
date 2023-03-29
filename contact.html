@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head class="about-head">
-    <!-- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- favicon -->
-    <!-- <link rel="shortcut icon" type="image/jpg" href="images/dgi-clinic.jpg" width="10px" height="10px"> -->
+     <link rel="shortcut icon" type="image/jpg" href="images/dgi-clinic.jpg" width="10px" height="10px"> 
 
     <!-- css link -->
-    <!-- <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact.css">
-     -->
+    <link rel="stylesheet" href="style.css"> -->
+    
     <!--font link  -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -21,17 +20,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Gudea&display=swap" rel="stylesheet"> -->
 
     <!-- icons link -->
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
     
     <!-- font awesome cdn link  -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-    <!-- <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script> -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script>
     
-    <title>Divine Medical Center</title>
+    <title>Divine Medical Center</title> 
 </head>
 <body>
-    <header id="pages-header">
+    <header id="header">
+        <!-- top navigation -->
+        <nav class="top">
+            <div class="contact">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+233244760710">Call us now</a>
+
+            </div>
+
+            <div class="location">
+                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                <a href="https://goo.gl/maps/H3z6WwxFAVauDauH6">Kasoa 2nd Bus Stop</a>
+            </div>
+
+            <div class="social-media">
+                <a href="https://web.facebook.com/Divine-Medical-Center-114484917038958"><i class="fa-brands fa-facebook-f"target="_blank"></i></a>
+                <a href=" https://wa.me/+233244760710" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </nav>
+
+        <!-- bottom navigation -->
+        <nav class="down">
+            <div class="image">
+                <img src="images/dgi-clinics.png" alt="kasoa best clinic">
+            </div>
+
+            <ul class="list">
+                <li><a class="active" href="/index.html">home</a></li>
+                <li><a href="#">practices</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">contact</a></li>
+            </ul>
+
+            <div class="menu-icons">
+                <i class="fas fa-bars fa-2x"></i> 
+                <i class="fas fa-close fa-2x"></i> 
+            </div>
+        </nav>
     </header>
 
 	<section id="container" class="container">
@@ -52,13 +89,86 @@
 		<div id="status"></div>
 	</section> 
 
-    <footer class="pages-footer">
+    <footer>
+        <div class="main-container"> 
+            <div class="sect1">
+                <div class="container">
+                    <div class="tops">
+                        <h2>Our Links</h2>
+                    </div>
+                    <ul class="list">
+                        <li><a class="active" href="#">home</a></li>
+                        <li><a href="#">practices</a></li>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>         
+                </div>     
+            </div>
+            <div class="sect2">
+                <div class="container">
+                    <div class="tops">
+                        <h2>Sign Up for the Latest Updates</h2>
+                    </div>
+                    <div class="form">
+                        <form action="">
+                            <input type="email" placeholder="Your Email address">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <div class="socials">
+                        <h3>Follow Us</h3>
+
+                        <div class="icons">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sect3">
+                <div class="container">
+                    <div class="tops">
+                        <h2>Contact Us</h2>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="contact">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+233244760710">Call us now</a>
+                        </div>
+            
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            <a href="https://goo.gl/maps/H3z6WwxFAVauDauH6">Kasoa 2nd Bus Stop</a>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>24 hour Service</span>
+                        </div>
+            
+                        <div class="icon">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span><a href="mailto:divinegroupinternational@gmail.com">Send a Mail</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyrightItems">
+            <h5>Copyright &copy; <span class="date">2024</span> Design & Powered by Blankson Obeng</h5> 
+             <!-- <i class="fas fa-forward"></i> -->
+             <i class="fa-solid fa-arrow-up"></i>
+        </div>
 
     </footer>
 
 
 
 	<script src="script.js"></script>
-   <script src="headerFooter.js"></script>
+   <!-- <script src="headerFooter.js"></script> -->
 </body>
 </html>

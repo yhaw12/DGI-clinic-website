@@ -32,11 +32,9 @@
 <body>
     <div class="popup">
 		<div class="popup-content">
-			<h2>Welcome!</h2>
-			<p>Thanks for visiting our website.
-                <br>
-                We are at your Service
-            </p>
+			<h2>Welcome to Our Clinc!</h2>
+            <p>We are delighted to have you here. Our dedicated team is committed to providing you with the best possible healthcare services.</p>
+            <p>Please feel free to explore our website.</p>
 			<button id="pop-btn">Close</button>
 		</div>
 	</div>
@@ -72,7 +70,7 @@
                 <li><a class="active" href="/index.html">home</a></li>
                 <li><a href="#">practices</a></li>
                 <li><a href="#">services</a></li>
-                <li><a href="#">blog</a></li>
+                <li><a href="/about.html">About</a></li>
                 <li><a href="/contact.html">contact</a></li>
             </ul>
 
@@ -88,10 +86,13 @@
     <section class="slides-wrapper">
 
         <div class="media">
-            <img id="currentimg" src="images/pexels-pix (2).jpg">
-            <img src="images/dgi11.jpg">
-            <img src="images/image1 (1).jpeg">
-            <img src="images/homecarre.jpg" alt="homecare services">
+            <div class="bannerImages">
+                <img id="currentimg" src="images/image1 (1).jpeg">
+                <img src="images/dgi11.jpg">
+                <img src="images/image1 (1).jpeg">
+                <img src="images/homecarre.jpg" alt="homecare services">
+            </div>
+            
 
             <video loop autoplay muted id="backVideo">
                 <source src="images/pexels-rodnae-productions-6129939.mp4">
@@ -182,7 +183,7 @@
                     </div>
                 </div>
                 <button class="btn">
-                    Book An Appointment
+                    <a href="/contact.html">Book An Appointment</a> 
                 </button>
             </div>
         </div>
@@ -210,7 +211,7 @@
 
 
     <!-- footer -->
-    <footer class="ft">
+    <footer>
         <div class="main-container"> 
             <div class="sect1">
                 <div class="container">
@@ -288,6 +289,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="headerFooter.js"></script>
+    <!-- <script src="headerFooter.js"></script> -->
 </body>
 </html>

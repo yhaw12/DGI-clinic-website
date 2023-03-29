@@ -27,52 +27,29 @@ close.onclick =()=>{
 }
 
 
-
-
-
 // select the displayed image
 
-let bannerImage = document.querySelector('#currentimg');
-let currentIndex = 0
+var slideIndex = 0;
+showSlides();
 
-let imagesArray = [
-    "images/pexels-pix (2).jpg",
-    "images/pexels-pix (3).jpg",
-    "images/pexels-pix (3).jpg",
-]
-
-
-function changeSlider(){
-    currentIndex =+1
-    if (bannerImage > imagesArray.length){
-        currentIndex = 0
-    }
-
-    bannerImage.src = imagesArray[currentIndex];
-};
-
-setInterval(changeSlider(), 1000);
-
-// const slider = document.querySelector('.slider');
-// 		const images = slider.querySelectorAll('img');
-// 		let currentIndex = 0;
-
-// 		function updateSlider() {
-// 			images.forEach((image, index) => {
-// 				if (index === currentIndex) {
-// 					image.classList.add('active');
-// 				} else {
-// 					image.classList.remove('active');
-// 				}
-// 			});
-// 			currentIndex = (currentIndex + 1) % images.length;
-// 			setTimeout(updateSlider, 3000); // Change every 3 seconds
-// 		}
-
-// 		updateSlider();
+function showSlides() {
+  var slides = document.querySelectorAll(".media img");
+//   var dots = document.getElementsByClassName("dot");
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+    
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex-1].classList.add("active");
+//   dots[slideIndex-1].classList.add("active");
+  setTimeout(showSlides, 5000);
+}
 
 // select the video
-
+let bannerImage = document.querySelector('.bannerImages');
 let videoBtn = document.getElementById('videoPlay');
 let bannerVideo = document.getElementById('backVideo');
 
@@ -81,7 +58,6 @@ videoBtn.addEventListener('click', ()=>{
     bannerImage.style.display = 'none';  
     closeBtn.style.display = 'block'
     videoBtn.style.display = 'none'
-
     videoBtn.style.transition = 'all 300ms ease'
 });
 
@@ -93,7 +69,6 @@ closeBtn.addEventListener("click", ()=>{
     videoBtn.style.display ='block'
     closeBtn.style.display = 'none';
     closeBtn.style.transition = 'all 300ms ease';
-
 })
 
 
@@ -121,17 +96,33 @@ footerBtn.addEventListener('click', ()=>{
 const popup = document.querySelector('.popup');
 const popBtn = document.querySelector('#pop-btn');
 
+let timeoutId;
+
 window.addEventListener('load', () => {
     popup.style.display = 'flex';
 });
 
-let popPrompt = ()=>{
-    popBtn.addEventListener('click', () => {
-        popup.style.display = 'none';
-    }); 
+// Function to close the popup
+function closePopup() {
+  popup.style.display = 'none';
 }
 
-setTimeout(popPrompt(), 5000)
+// Close the popup after 5 seconds of inactivity
+timeoutId = setTimeout(closePopup, 5000);
+
+// Reset the timeout if there is any activity
+function resetTimeout() {
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(closePopup, 5000);
+}
+
+document.addEventListener('mousemove', resetTimeout);
+document.addEventListener('keydown', resetTimeout);
+
+// Close the popup when the button is clicked
+popBtn.addEventListener('click', closePopup);
+
+
 
 
 
