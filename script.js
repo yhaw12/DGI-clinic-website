@@ -71,11 +71,6 @@ closeBtn.addEventListener("click", ()=>{
     closeBtn.style.transition = 'all 300ms ease';
 })
 
-
-
-
-
-
 // footer 
 
 let footerDate = document.querySelector(".date");
@@ -88,8 +83,7 @@ footerBtn.addEventListener('click', ()=>{
      window.scrollTo({
         top: 0,
         behavior: "smooth"
-    })
-    
+    })    
 });
 
 // popup................................
@@ -123,28 +117,29 @@ document.addEventListener('keydown', resetTimeout);
 popBtn.addEventListener('click', closePopup);
 
 
-
-
-
-// if popup button is not pressed in the first 5 seconds popup is automatically removed...... to be continued
-
 // contact page
-// const form = document.getElementById('contact-form');
-// const status = document.getElementById('status');
+const form = document.getElementById('contact-form');
+const status = document.getElementById('status');
+console.log(status)
 
-// form.addEventListener('submit', (event) => {
-// 	event.preventDefault();
-// 	const formData = new FormData(form);
-// 	const xhr = new XMLHttpRequest();
-// 	xhr.open('POST', form.getAttribute('action'));
-// 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-// 	xhr.onreadystatechange = function() {
-// 		if (xhr.readyState === 4 && xhr.status === 200) {
-// 			form.reset();
-// 			status.innerHTML = 'Thank you for your message!';
-// 		} else {
-// 			status.innerHTML = 'Oops! There was a problem.';
-// 		}
-// 	};
-// 	xhr.send(new URLSearchParams(formData).toString());
-// });
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
+	const formData = new FormData(form);
+	fetch(form.getAttribute('action'), {
+		method: 'POST',
+		body: new URLSearchParams(formData)
+	})
+	.then(response => {
+		if (response.ok) {
+			form.reset();
+			status.innerHTML = 'Thank you for your message!';
+		} else {
+			status.innerHTML = 'Oops! There was a problem.';
+		}
+	})
+	.catch(error => {
+		status.innerHTML = 'Oops! There was a problem.';
+	});
+});
+

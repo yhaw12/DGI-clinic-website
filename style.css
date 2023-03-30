@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 :root{
     --color-1: #F3F8FC;
-    --color-2: gray;
+    --color-2: #0069d9;
     --color-4: #68B6B2;
     --color-3: #add8e6;
     --p-color: #90929D;
@@ -75,7 +75,9 @@ body{
 	cursor: pointer;
 }
 
-
+button a{
+    color: var(--color-1);
+}
 a{
     text-transform: capitalize;
     color: #121213;
@@ -204,12 +206,11 @@ header.active{
 
  .slides-wrapper{
     width: 100%;
-    height: 80vh;
+    height: auto;
     position: relative;
     margin-top: 9%;
     overflow-x: hidden;
     transition: all 300ms ease;
-    outline: 2px solid red;
 }
 .media {
     position: relative;
@@ -228,7 +229,10 @@ header.active{
 
 
 .media video{
+    top: 0;
+    left: 0;
     display: none;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -253,12 +257,13 @@ header.active{
 .slides-wrapper .text p{
     font-size: var(--p);
     margin-bottom: 4rem;
+    font-size: var(--p);
     color: var(--text-color);
 }
 
 
 .slides-wrapper .text p span{
-    color: var(--p-color);
+    color: var(--text-color);
 }
 
 .slides-wrapper .bt{
@@ -397,12 +402,18 @@ header.active{
     padding: 1rem;
     border-radius: 10px;
     cursor: pointer;
+    text-align: center;
     background-color: var(--text-color);
     box-shadow: .2px 3px 9px rgba(0,0,0,0.3);
 }
 .specialist .bottom-section .image{
     text-align: center;
     font-size: 8rem;
+}
+
+.specialist .bottom-section .image img{
+    width: 7rem;
+    height: 7rem;
 }
 .specialist .bottom-section h3{
     font-size: var(--h3);
@@ -459,8 +470,6 @@ header.active{
     height: 400px;
 }
  
-
-
 /* footer */
 footer{
     width: 100%;
@@ -550,6 +559,29 @@ form button{
 .main-container .sect3 .container .icon{
     margin: .5rem 0;
 }
+.sect3 .icon a{
+    color: var(--color-1);
+}
+
+.sect3 .container{
+    position: relative;
+}
+
+.sect3 .container .fa-arrow-up{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 4rem;
+    height: 4rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--color-2);
+    background-color: var(--color-1);
+}
 
 .copyrightItems{
     width: 100%;
@@ -563,21 +595,8 @@ form button{
 
 .copyrightItems h5{
     font-size: 1rem;
+    margin: 0 auto;
 }
-
-.copyrightItems i{
-    width: 2rem;
-    height: 2rem; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    color: var(--color-2);
-    background-color: var(--color-1);
-}
-
 
 /* last section */
 .main-container .sect3 .container .bottom{
@@ -600,7 +619,7 @@ footer .small-container .text{
 
 
 /* Contact Page ============= */
-#container {
+#formContainer {
 	max-width: 400px;
 	margin: 12rem auto 3rem;
 	padding: 20px;
@@ -612,14 +631,14 @@ footer .small-container .text{
 	
 }
 
-#container h2 {
+#formContainer h2 {
 	text-align: center;
 	margin-bottom: 20px;
     font-size: var(--h2);
     position: relative;
 }
 
-#container h2::before{
+#formContainer h2::before{
     position: absolute;
     content: '';
     width: 0%;
@@ -629,18 +648,17 @@ footer .small-container .text{
     background-color: #121213;
     transition: all 300ms ease;
 }
-#container:hover h2::before{
+#formContainer:hover h2::before{
     width: 37%;
     transform-origin: left;
-
 }
 
-#container form label {
+#formContainer form label {
 	display: block;
 	margin-bottom: 3px;
 }
 
-#container form input,
+#formContainer form input,
 form textarea {
 	display: block;
 	width: 100%;
@@ -650,7 +668,7 @@ form textarea {
 	margin-bottom: 1rem;
 }
 
-#container form button[type="submit"] {
+#formContainer form button[type="submit"] {
 	background-color: #007bff;
 	color: #fff;
 	padding: 10px 20px;
@@ -659,11 +677,11 @@ form textarea {
 	cursor: pointer;
 }
 
-#container form button[type="submit"]:hover {
+#formContainer form button[type="submit"]:hover {
 	background-color: #0069d9;
 }
 
-#status {
+#status{
 	margin-top: 20px;
 	text-align: center;
 	font-weight: bold;
@@ -693,7 +711,7 @@ form textarea {
 }
 
 .about-us .container .Cont-leftSide .image img{
-    width: clamp(250px, 50vw, 450px);
+    width: clamp(250px, 50vw, 450px); 
     height: 500px;
     max-width: 600px;
     object-fit: cover;
@@ -704,22 +722,23 @@ form textarea {
     margin-top: 10rem;
 }
 
-.about-us .Cont-rightSide ul{
+.links ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 2rem 0;
 }
 
-.about-us .Cont-rightSide .links .services{
+ .services{
     display: flex;
     align-items: center;
 }
 
-.about-us .Cont-rightSide li{
-    margin: .5rem 0;
+.services li{
+    margin: 1rem 0;
 }
 
-.about-us .Cont-rightSide i{
+
+.services i{
     margin-right: .2rem;
     color: var(--color-1);
     background-color: var(--color-2);
@@ -747,6 +766,9 @@ form textarea {
     display: inline-flex;
     align-items: center;
     flex-basis: 80%;
+}
+.appSide i{
+    color: var(--color-1);
 }
 .about-us .Cont-rightSide .text .appointment .appSide span{
     margin-left: .2rem;
@@ -790,6 +812,7 @@ form textarea {
    align-items: center;
    justify-content: space-between;
    gap: .5rem;
+   line-height: auto;
 }
 
 .about-us .map .card .left-mapCard{
@@ -866,11 +889,19 @@ form textarea {
     background: linear-gradient(to bottom, var(--color-2), var(--color-3));
 }
 .about-us .map .card .right-mapCard .right-smcard i{
-    font-size: .5rem;
+    margin-right: .2rem;
+    color: var(--color-1);
+    background-color: var(--color-2);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-us .map .card .right-mapCard .right-smcard .tops{
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 .about-us .map .card .right-mapCard .right-smcard .tops span{
     font-size: .7rem;
@@ -891,6 +922,20 @@ form textarea {
     text-align: center;
 }
 
+/* our services */
+
+.our-services{
+    width: 100%;
+    height: auto;
+    padding: var(--section-padding);
+    padding-top: 10rem;
+    background-color: var(--color-1);
+    /* margin-top: 10rem; */
+}
+
+.our-services .heading-text h2{
+    font-size: var(--h2);
+}
 
 /* meadia queris */
 
@@ -969,7 +1014,7 @@ form textarea {
 
     .slides-wrapper .media{
         width: 100%;
-        height: 450px;
+        height: 450px; 
     }
 
     .about-us .container{
@@ -1018,7 +1063,7 @@ form textarea {
         top: 9rem;
     }
     .slides-wrapper .media{
-        height: 350;
+        height: 350px; 
     } 
     
     .our-activities .bottom {
@@ -1031,7 +1076,6 @@ form textarea {
     }
     .specialist .bottom-section .cards{
         grid-template-columns: 1fr;
-        outline: 2px solid ;
     }
     .specialist .bottom-section .card{
         width: 90%;
@@ -1042,7 +1086,7 @@ form textarea {
 
     footer .main-container{
         text-align: center;
-        margin: 0 auto;
+        margin: auto;
         grid-template-columns: 1fr;
     }
     .form form{
@@ -1054,6 +1098,7 @@ form textarea {
         width: 100%;
         margin: 0 auto;
         margin-bottom: 2rem;
+        
     } 
 
     .about-us .map .card .right-mapCard .left-smcard {

@@ -12,14 +12,6 @@
     <!-- css link -->
     <link rel="stylesheet" href="style.css">
     
-    <!--font link  -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gudea&display=swap" rel="stylesheet"> 
-
     <!-- icons link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
     
@@ -31,7 +23,7 @@
     <title>Divine Medical Center</title> 
 </head>
 <body>
-    <header id="pages-header">
+    <header>
         <!-- top navigation -->
         <nav class="top">
             <div class="contact">
@@ -59,8 +51,8 @@
 
             <ul class="list">
                 <li><a class="active" href="/index.html">home</a></li>
-                <li><a href="#">practices</a></li>
-                <li><a href="#">services</a></li>
+                <!-- <li><a href="#">practices</a></li> -->
+                <li><a href="/services.html">services</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/contact.html">contact</a></li>
             </ul>
@@ -156,7 +148,7 @@
                         <div class="left-smcard">
                             <h2>Contact Us</h2>
                             <span> Any question or remarks? Just write us a message</span>
-                            <form id="contact-form" method="post" action="">
+                            <form id="contact-form" method="POST" action="/submit-form">
 
                                 <div class="label-container">
                                     <div class="label-card">
@@ -182,6 +174,7 @@
                                 <button class="xxx"></button>
                                 <button>Send</button>
                             </form>
+                            <div id="status"></div>
                         </div>
                         <div class="right-smcard">
                             <div class="tops">
@@ -221,6 +214,7 @@
         </div>
     </section>
 
+    <!-- footer -->
     <footer>
         <div class="main-container"> 
             <div class="sect1">
@@ -243,7 +237,7 @@
                         <h2>Sign Up for the Latest Updates</h2>
                     </div>
                     <div class="form">
-                        <form action="">
+                        <form id="contact-form" action="/submit-form" method="POST" >
                             <input type="email" placeholder="Your Email address">
                             <button type="submit">Subscribe</button>
                         </form>
@@ -267,7 +261,7 @@
                     </div>
 
                     <div class="bottom">
-                        <div class="contact">
+                        <div class="icon">
                             <i class="fas fa-phone"></i>
                             <a href="tel:+233244760710">Call us now</a>
                         </div>
@@ -287,15 +281,16 @@
                         </div>
                     </div>
 
+                    <i class="fa-solid fa-arrow-up"></i>
+
                 </div>
             </div>
         </div>
         <div class="copyrightItems">
             <h5>Copyright &copy; <span class="date">2024</span> Design & Powered by Blankson Obeng</h5> 
-             <!-- <i class="fas fa-forward"></i> -->
-             <i class="fa-solid fa-arrow-up"></i>
         </div>
     </footer>
+
     <script src="script.js"></script>
     <!-- <script src="headerFooter.js"></script> -->
 </body>
