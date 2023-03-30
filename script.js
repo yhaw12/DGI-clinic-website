@@ -119,8 +119,6 @@ popBtn.addEventListener('click', closePopup);
 
 // contact page
 const form = document.getElementById('contact-form');
-const status = document.getElementById('status');
-console.log(status)
 
 
 form.addEventListener('submit', (event) => {
@@ -133,13 +131,13 @@ form.addEventListener('submit', (event) => {
 	.then(response => {
 		if (response.ok) {
 			form.reset();
-			status.innerHTML = 'Thank you for your message!';
+			document.getElementById('status').innerHTML = 'Thank you for your message!';
 		} else {
-			status.innerHTML = 'Oops! There was a problem.';
+			document.getElementById('status').innerHTML = 'Oops! There was a problem.';
 		}
 	})
 	.catch(error => {
-		status.innerHTML = 'Oops! There was a problem.';
+		document.getElementById('status').innerHTML = 'Oops! There was a problem.';
 	});
 });
 
